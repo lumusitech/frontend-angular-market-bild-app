@@ -1,0 +1,229 @@
+// background-color
+@mixin bg-darker
+  background: $darker
+@mixin bg-dark
+  background: $dark
+@mixin bg-grey
+  background: $grey
+@mixin bg-dark-grey
+  background: $dark-grey
+@mixin bg-lighter
+  background: $lighter
+@mixin bg-light
+  background: $light
+@mixin bg-lighter-blue
+  background: $lighter-blue
+@mixin bg-light-blue
+  background: $light-blue
+@mixin bg-green
+  background: $green
+@mixin bg-dark-green
+  background: $dark-green
+@mixin bg-lighter-turquoise
+  background: $lighter-turquoise
+@mixin bg-light-turquoise
+  background: $light-turquoise
+@mixin bg-danger
+  background: $danger
+@mixin bg-danger-dark
+  background: $danger-dark
+// background linear-gradient
+@mixin gradient-darkgreen-green
+  background: linear-gradient($darkgreen, $green)
+/*========================================*/
+
+// Mixins - basics
+@mixin reset-marpad
+  padding: 0
+  margin: 0
+// Mixins - text-align
+@mixin text-center
+  text-align: center
+@mixin text-left
+  text-align: left
+@mixin text-right
+  text-align: right
+@mixin text-justify
+  text-align: justify
+@mixin text-justify-all
+  text-align: justify-all
+// Mixins font-weight
+@mixin font-lighter
+  font-weight: 200
+@mixin font-lighter-italic
+  font-weight: 200
+  font-style: italic
+@mixin font-light
+  font-weight: 400
+@mixin font-light-italic
+  font-weight: 400
+  font-style: italic
+@mixin font-bold
+  font-weight: 600
+@mixin font-bold-italic
+  font-weight: 600
+  font-style: italic
+@mixin font-bolder
+  font-weight: 800
+@mixin font-bolder-italic
+  font-weight: 800
+  font-style: italic
+
+// padding min
+@mixin padding-min
+  padding: .5em
+@mixin padding-min-l
+  padding-left: .5em
+@mixin padding-min-t
+  padding-top: .5em
+@mixin padding-min-r
+  padding-right: .5em
+@mixin padding-min-b
+  padding-bottom: .5em
+// padding medium
+@mixin padding-md
+  padding: 1em
+@mixin padding-md-l
+  padding-left: 1em
+@mixin padding-md-t
+  padding-top: 1em
+@mixin padding-md-r
+  padding-right: 1em
+@mixin padding-md-b
+  padding-bottom: 1em
+// padding max
+@mixin padding-max
+  padding: 2em
+@mixin padding-max-l
+  padding-left: 2em
+@mixin padding-max-t
+  padding-top: 2em
+@mixin padding-max-r
+  padding-right: 2em
+@mixin padding-max-b
+  padding-bottom: 2em
+
+// margin min
+@mixin margin-min
+  margin: .5em
+@mixin margin-min-l
+  margin-left: .5em
+@mixin margin-min-t
+  margin-top: .5em
+@mixin margin-min-r
+  margin-right: .5em
+@mixin margin-min-b
+  margin-bottom: .5em
+// margin medium
+@mixin margin-md
+  margin: 1em
+@mixin margin-md-l
+  margin-left: 1em
+@mixin margin-md-t
+  margin-top: 1em
+@mixin margin-md-r
+  margin-right: 1em
+@mixin margin-md-b
+  padding-bottom: 1em
+// margin max
+@mixin margin-max
+  margin: 2em
+@mixin margin-max-l
+  margin-left: 2em
+@mixin margin-max-t
+  margin-top: 2em
+@mixin margin-max-r
+  margin-right: 2em
+@mixin margin-max-b
+  margin-bottom: 2em
+
+/*========================================*/
+
+// Mixins - grid
+
+@mixin grid-1
+  display: grid
+  grid-template-columns: 1fr
+@mixin grid-2
+  display: grid
+  grid-template-columns: 2fr 1fr
+@mixin grid-3
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+@mixin grid-4
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+
+/*========================================*/
+
+// Mixins - flex
+
+@mixin flex-center
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+@mixin flex-space-around
+  display: flex
+  justify-content: space-around
+  align-items: center
+  flex-wrap: wrap
+
+@mixin flex-space-evenly
+  display: flex
+  justify-content: space-evenly
+  align-items: center
+  flex-wrap: wrap
+@mixin flex-space-between
+  display: flex
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+
+@mixin flex-start
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  flex-wrap: wrap
+@mixin flex-end
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  flex-wrap: wrap
+
+/*========================================*/
+
+// Mixins - media queries
+@mixin for-phone-only
+  @media (max-width: 599px)
+    @content
+
+@mixin for-tablet-portrait-up
+  @media (min-width: 600px)
+    @content
+
+@mixin for-tablet-landscape-up
+  @media (min-width: 900px)
+    @content
+
+@mixin for-desktop-up
+  @media (min-width: 1200px)
+    @content
+
+@mixin for-big-desktop-up
+  @media (min-width: 1800px)
+    @content
+
+/*========================================*/
+
+// Mixins - Test
+@mixin border-test
+  border: 1px solid $grey
+@mixin bg-red-test
+  background: red
+@mixin bg-green-test
+  background: green
+@mixin bg-blue-test
+  background: blue
+@mixin bg-yellow-test
+  background: yellow

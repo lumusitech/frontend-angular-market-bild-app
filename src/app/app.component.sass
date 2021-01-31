@@ -1,0 +1,24 @@
+@import ./sass/variables
+@import ./sass/mixins
+.title
+  @include reset-marpad
+  @include text-center
+  @include font-bold-italic
+  @include bg-dark-green
+
+.container
+  @include grid-2
+  @include for-phone-only
+    @include grid-1
+  @include text-center
+
+  @include padding-md
+  @include bg-dark
+
+  &__products-list
+    @include border-test
+    @include bg-red-test
+
+  &__purchase-list
+    @include border-test
+    @include bg-yellow-test

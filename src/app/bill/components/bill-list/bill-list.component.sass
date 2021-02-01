@@ -5,14 +5,13 @@
   @include grid-1
 
   &__total
-    @include padding-md-b
-    @include padding-md-t
     @include bg-darker
-
+    @include padding-md
     &-info
       @include text-center
       font-size: 1.5em
       color: $lighter
+      @include text-shadow-md
 
   &__costList
     @include text-left
@@ -20,3 +19,19 @@
 
     &-item
       @include margin-min-b
+      cursor: pointer
+      font-size: 1.5em
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3)
+      @include padding-min-b
+      transition: all .3s
+      &:hover
+        text-decoration: underline
+        color: darkred
+        transform: translateX(10px)
+
+      &-delete
+        opacity: 0
+        transition: all 1s
+
+.container__costList-item:hover .container__costList-item-delete
+  opacity: 1

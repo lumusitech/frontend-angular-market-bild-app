@@ -3,11 +3,15 @@
 .title
   @include reset-marpad
   @include text-center
-  @include font-bold-italic
-  @include bg-dark-green
+  @include font-bold
+  @include bg-dark
+  @include margin-min-t
+  @include text-shadow-sm
+  color: $lighter
 
 .container
   @include grid-1
+  @include reset-marpad
   @include for-xsm-display
     @include grid-1_5-1
   @include for-sm-display
@@ -16,14 +20,17 @@
     @include grid-2-1
   @include for-lg-display
     @include grid-3-1
-
   @include padding-md
   @include bg-dark
 
   &__products-list
-    @include border-test
-    @include bg-red-test
+    @include bg-dark-grey
+    width: 98%
+    margin: 0 2em 0 auto
+    @include shadow-radius-lg
+    overflow: hidden
 
   &__purchase-list
-    @include border-test
-    @include bg-yellow-test
+    @include bg-grey
+    @include shadow-radius-lg
+    overflow: hidden

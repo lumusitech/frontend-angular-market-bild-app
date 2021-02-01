@@ -1,4 +1,5 @@
 <div class="container">
+  <h3 class="container__food-title">Comida</h3>
   <div class="container__food">
     <div
       *ngFor="let product of products | type: 'food'"
@@ -15,6 +16,7 @@
     </div>
   </div>
 
+  <h3 class="container__drink-title">Bebida</h3>
   <div class="container__drink">
     <div
       *ngFor="let product of products | type: 'drink'"

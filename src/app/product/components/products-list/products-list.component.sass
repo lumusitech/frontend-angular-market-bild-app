@@ -12,9 +12,27 @@
       @include grid-3
     @include for-lg-display
       @include grid-4
+    &-title
+      @include text-center
+      @include bg-darker
+      color: $lighter
+      font-size: 1.7em
+      @include font-light-italic
+      @include padding-min
+      @include text-shadow-lg
+
     &-card
       @include bg-light-blue
       @include margin-min
+      @include shadow-radius-sm
+      overflow: hidden
+      transition: all .25s
+      &:hover
+        @include shadow-radius-md
+        cursor: pointer
+      &:active
+        @include shadow-radius-sm
+
       &-img
         width: 100%
         & img
@@ -29,9 +47,24 @@
       @include grid-3
     @include for-lg-display
       @include grid-4
+    &-title
+      @include text-center
+      @include bg-darker
+      color: $lighter
+      font-size: 1.7em
+      @include font-light-italic
+      @include padding-min
+      @include text-shadow-lg
+
     &-card
       @include bg-light-blue
       @include margin-min
+      @include shadow-radius-sm
+      overflow: hidden
+      transition: all .25s
+      &:hover
+        @include shadow-radius-md
+        cursor: pointer
       &-img
         width: 100%
         & img

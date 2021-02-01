@@ -22,16 +22,21 @@
       @include text-shadow-lg
 
     &-card
-      @include bg-light-blue
+      @include bg-danger-dark
+
       @include margin-min
       @include shadow-radius-sm
       overflow: hidden
       transition: all .25s
       &:hover
         @include shadow-radius-md
+        @include bg-danger
         cursor: pointer
+        color: $lighter
+        transform: scale(1.03, 1.03)
       &:active
         @include shadow-radius-sm
+        transform: scale(.98, .98)
 
       &-img
         width: 100%
@@ -39,6 +44,19 @@
           width: 100%
           height: 100px
           object-fit: cover
+      &-info
+        @include flex-space-around
+        font-size: 1.2em
+        @include padding-min
+
+        &-name
+          color: $lighter
+          @include text-shadow-md
+
+        &-cost
+          color: $light
+          @include text-shadow-md
+
   &__drink
     @include grid-1
     @include for-sm-display
@@ -57,17 +75,45 @@
       @include text-shadow-lg
 
     &-card
-      @include bg-light-blue
+      //@include bg-light-turquoise
+      @include bg-dark-green
       @include margin-min
       @include shadow-radius-sm
       overflow: hidden
       transition: all .25s
       &:hover
         @include shadow-radius-md
+        //@include bg-lighter-turquoise
+        @include bg-green
         cursor: pointer
+        transform: scale(1.03, 1.03)
+        color: $lighter
+        transform: scale(1.03, 1.03)
+      &:active
+        @include shadow-radius-sm
+        transform: scale(.98, .98)
       &-img
         width: 100%
         & img
           width: 100%
           height: 100px
           object-fit: cover
+      &-info
+        @include flex-space-around
+        font-size: 1.2em
+        @include padding-min
+
+        &-name
+          color: $lighter
+          @include text-shadow-md
+
+        &-cost
+          color: $light
+          @include text-shadow-md
+
+.container__food-card:hover .container__food-card-info-cost
+  color: $lighter
+  @include text-shadow-md
+
+.container__drink-card:hover .container__drink-card-info-cost
+  color: $lighter

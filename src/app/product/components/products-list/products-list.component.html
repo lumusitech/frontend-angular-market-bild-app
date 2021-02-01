@@ -10,8 +10,8 @@
         <img [src]="product.img" [alt]="product.name" />
       </div>
       <div class="container__food-card-info">
-        <p class="container__food-card-name">{{ product.name }}</p>
-        <p class="container__food-card-cost">{{ product.cost }}</p>
+        <p class="container__food-card-info-name">{{ product.name }}</p>
+        <p class="container__food-card-info-cost">${{ product.cost }}</p>
       </div>
     </div>
   </div>
@@ -27,8 +27,8 @@
         <img [src]="product.img" [alt]="product.name" />
       </div>
       <div class="container__drink-card-info">
-        <p class="container__drink-card-name">{{ product.name }}</p>
-        <p class="container__drink-card-cost">{{ product.cost }}</p>
+        <p class="container__drink-card-info-name">{{ product.name }}</p>
+        <p class="container__drink-card-info-cost">${{ product.cost }}</p>
       </div>
     </div>
   </div>

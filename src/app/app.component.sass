@@ -7,10 +7,15 @@
   @include bg-dark-green
 
 .container
-  @include grid-2
-  @include for-phone-only
-    @include grid-1
-  @include text-center
+  @include grid-1
+  @include for-xsm-display
+    @include grid-1_5-1
+  @include for-sm-display
+    @include grid-2
+  @include for-md-display
+    @include grid-2-1
+  @include for-lg-display
+    @include grid-3-1
 
   @include padding-md
   @include bg-dark

@@ -36,6 +36,8 @@
 @mixin reset-marpad
   padding: 0
   margin: 0
+@mixin reset-list
+  list-style: none
 // Mixins - text-align
 @mixin text-center
   text-align: center
@@ -146,7 +148,16 @@
   grid-template-columns: 1fr
 @mixin grid-2
   display: grid
+  grid-template-columns: 1fr 1fr
+@mixin grid-1_5-1
+  display: grid
+  grid-template-columns: 1.5fr 1fr
+@mixin grid-2-1
+  display: grid
   grid-template-columns: 2fr 1fr
+@mixin grid-3-1
+  display: grid
+  grid-template-columns: 3fr 1fr
 @mixin grid-3
   display: grid
   grid-template-columns: repeat(3, 1fr)
@@ -156,7 +167,7 @@
 
 /*========================================*/
 
-// Mixins - flex
+// Mixins - flex row
 
 @mixin flex-center
   display: flex
@@ -191,27 +202,64 @@
   align-items: center
   flex-wrap: wrap
 
+// Mixins - flex column
+
+@mixin flex-column-center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  flex-wrap: wrap
+@mixin flex-column-space-around
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  flex-wrap: wrap
+
+@mixin flex-column-space-evenly
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  align-items: center
+  flex-wrap: wrap
+@mixin flex-column-space-between
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  align-items: center
+  flex-wrap: wrap
+
+@mixin flex-column-start
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  flex-wrap: wrap
+@mixin flex-column-end
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: center
+  flex-wrap: wrap
+
 /*========================================*/
 
 // Mixins - media queries
-@mixin for-phone-only
-  @media (max-width: 599px)
+@mixin for-xsm-display
+  @media (min-width: 350px)
     @content
-
-@mixin for-tablet-portrait-up
-  @media (min-width: 600px)
+@mixin for-sm-display
+  @media (min-width: 500px)
     @content
-
-@mixin for-tablet-landscape-up
+@mixin for-md-display
+  @media (min-width: 650px)
+    @content
+@mixin for-lg-display
   @media (min-width: 900px)
     @content
-
-@mixin for-desktop-up
-  @media (min-width: 1200px)
-    @content
-
-@mixin for-big-desktop-up
-  @media (min-width: 1800px)
+@mixin for-xlg-display
+  @media (max-width: 1200px)
     @content
 
 /*========================================*/

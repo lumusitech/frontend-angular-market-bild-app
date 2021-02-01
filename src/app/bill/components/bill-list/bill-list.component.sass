@@ -1,0 +1,22 @@
+@import ../../../sass/variables
+@import ../../../sass/mixins
+
+.container
+  @include grid-1
+
+  &__total
+    @include padding-md-b
+    @include padding-md-t
+    @include bg-darker
+
+    &-info
+      @include text-center
+      font-size: 1.5em
+      color: $lighter
+
+  &__costList
+    @include text-left
+    @include padding-max
+
+    &-item
+      @include margin-min-b

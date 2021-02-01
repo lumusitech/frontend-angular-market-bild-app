@@ -1,0 +1,40 @@
+@import ../../../sass/variables
+@import ../../../sass/mixins
+
+.container
+  @include grid-1
+
+  &__food
+    @include grid-1
+    @include for-sm-display
+      @include grid-2
+    @include for-md-display
+      @include grid-3
+    @include for-lg-display
+      @include grid-4
+    &-card
+      @include bg-light-blue
+      @include margin-min
+      &-img
+        width: 100%
+        & img
+          width: 100%
+          height: 100px
+          object-fit: cover
+  &__drink
+    @include grid-1
+    @include for-sm-display
+      @include grid-2
+    @include for-md-display
+      @include grid-3
+    @include for-lg-display
+      @include grid-4
+    &-card
+      @include bg-light-blue
+      @include margin-min
+      &-img
+        width: 100%
+        & img
+          width: 100%
+          height: 100px
+          object-fit: cover

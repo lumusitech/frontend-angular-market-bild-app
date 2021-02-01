@@ -1,9 +1,15 @@
 <h1 class="title">Caja registradora</h1>
 <div class="container">
   <div class="container__products-list">
-    <p>Aquí va la lista de productos</p>
+    <app-products-list
+      (addProductEvent)="onAddProductEvent($event)"
+    ></app-products-list>
   </div>
   <div class="container__purchase-list">
-    <p>Aquí va la lista de compras y el costo total</p>
+    <app-bill-list
+      [costList]="costList"
+      [total]="total"
+      (rmProductEvent)="onRmProductEvent($event)"
+    ></app-bill-list>
   </div>
 </div>

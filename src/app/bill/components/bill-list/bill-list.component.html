@@ -10,7 +10,9 @@
       (click)="onClick(product)"
     >
       <span class="container__costList-item-delete">❌</span>
-      {{ product.name }}: ${{ product.cost }} x{{ product.quantity }}
+      {{ product.name }}: ${{ product.cost * product.quantity }} x{{
+        product.quantity
+      }}
     </p>
   </div>
 </div>

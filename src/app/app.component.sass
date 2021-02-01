@@ -11,6 +11,7 @@
   color: $lighter
 
 .container
+  padding: 1em!important
   @include grid-1
   @include reset-marpad
   @include for-xsm-display
@@ -21,7 +22,7 @@
     @include grid-2-1
   @include for-lg-display
     @include grid-3-1
-  @include padding-md
+  @include padding-max
   @include bg-dark
 
   &__products-list
@@ -30,6 +31,7 @@
     margin: 0 2em 0 auto
     @include shadow-radius-lg
     overflow: hidden
+    @include padding-min-b
 
   &__purchase-list
     @include bg-grey
